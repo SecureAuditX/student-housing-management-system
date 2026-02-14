@@ -39,10 +39,10 @@ MainWindow::MainWindow(QWidget *parent)
     qDebug() << "Available SQL drivers:" << QSqlDatabase::drivers(); // Check available database drivers
 
     db = QSqlDatabase::addDatabase("QMYSQL"); // Connect to MySQL database
-    db.setHostName("localhost");
-    db.setPort(3306);
+    db.setHostName(""); // host
+    db.setPort("");
     db.setDatabaseName("student_mang_sys");
-    db.setUserName("db_user_name");
+    db.setUserName(""); // username
     db.setPassword("");
 
     if (!db.open()) {
